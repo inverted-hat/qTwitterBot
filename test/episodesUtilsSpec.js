@@ -2,6 +2,40 @@ const episodesUtils = require('../src/js/episodesUtils.js');
 const expect = require('chai').expect;
 
 describe('episodesUtils', () => {
+    describe('resetEpisodesWhenAllHaveBeenPosted', () => {
+        it('should set posted on all episodes to false when posted on all episodes is true', () => {
+            //given
+            const episodes = [
+                { number: 10, posted: true },
+                { number: 8, posted: true },
+                { number: 77, posted: true }
+            ];
+
+            //when
+            const result = episodesUtils.resetEpisodesWhenAllHaveBeenPosted(episodes);
+
+            //then
+            expect(result[0]).to.deep.equal({ number: 10, posted: false });
+            expect(result[1]).to.deep.equal({ number: 8, posted: false });
+            expect(result[2]).to.deep.equal({ number: 77, posted: false });
+        });
+
+        it('should do nothing when at least one episode hast posted false', () => {
+            //given
+            const episodes = [
+                { number: 10, posted: true },
+                { number: 8, posted: false },
+                { number: 77, posted: true }
+            ];
+
+            //when
+            const result = episodesUtils.resetEpisodesWhenAllHaveBeenPosted(episodes);
+
+            //then
+            expect(result).to.deep.equal(episodes);
+        });
+    });
+
     describe('getRandomUnPostedEpisode', () => {
         it('should return a random episode where posted is false', () => {
             //given

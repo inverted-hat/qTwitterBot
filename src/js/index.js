@@ -4,7 +4,7 @@ const twitterUtils = require('./twitterUtils.js');
 const episodesFilePath = './src/data/episodes.json';
 
 fileUtils.readFile(episodesFilePath).then(content => {
-    const episodes = JSON.parse(content).episodes;
+    const episodes = episodesUtils.resetEpisodesWhenAllHaveBeenPosted(JSON.parse(content).episodes);
     const randomEpisode = episodesUtils.getRandomUnPostedEpisode(episodes);
 
     twitterUtils.postStatus({ status: `Folge ${randomEpisode.number} ${randomEpisode.title}` })
