@@ -5,6 +5,13 @@ const expect = require('chai').expect;
 
 describe('twitterUtils', () => {
     describe('postStatus', () => {
+        twitterUtils.init({
+            consumer_key: 'someKey',
+            consumer_secret: 'someSecret',
+            access_token: 'someToken',
+            access_token_secret: 'someToken'
+        });
+
         afterEach(() => {
             Twit.prototype.post.restore();
         });

@@ -1,5 +1,6 @@
 const fileUtils = require('./fileUtils.js');
 const episodesUtils = require('./episodesUtils.js');
+const twitterConfig = require('./twitterConfig');
 const twitterUtils = require('./twitterUtils.js');
 const episodesFilePath = `${__dirname}/../data/episodes.json`;
 
@@ -7,6 +8,7 @@ fileUtils.readFile(episodesFilePath).then(content => {
     const episodes = episodesUtils.resetEpisodesWhenAllHaveBeenPosted(JSON.parse(content).episodes);
     const randomEpisode = episodesUtils.getRandomUnPostedEpisode(episodes);
 
+    twitterUtils.init(twitterConfig);
     twitterUtils.postStatus({ status: `Folge ${randomEpisode.number} ${randomEpisode.title}` })
         .then(data => {
             console.log(data);
