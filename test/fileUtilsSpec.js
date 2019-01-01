@@ -1,5 +1,6 @@
 const fileUtils = require('../src/js/fileUtils.js');
 const expect = require('chai').expect;
+const fs = require('fs');
 
 describe('fileUtils', () => {
     describe('readFile', () => {
@@ -18,4 +19,21 @@ describe('fileUtils', () => {
                 });
         });
     });
+
+    describe('writeFile', () => {
+        it('should resolve Promise when file was successfully written', (done) => {
+            //given
+            const path = './test/data/writtenFile.json';
+            const contentToWrite = JSON.stringify({ timestamp: Date.now() });
+
+            //when
+            fileUtils.writeFile(path, contentToWrite).then(() => {
+                //then
+                fileUtils.readFile(path).then(content => {
+                    expect(content).to.equal(contentToWrite);
+                    done();
+                });
+            });
+        });
+    })
 });

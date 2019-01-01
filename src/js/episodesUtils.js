@@ -8,5 +8,13 @@ module.exports = {
             const randomIndex = Math.floor(Math.random() * notPostedEpisodes.length);
             return notPostedEpisodes[randomIndex];
         }
+    },
+    markEpisodeAsPosted: (episodes, number) => {
+        return episodes.map(episode => {
+            if(episode.number === number) {
+                episode.posted = true;
+            }
+            return episode;
+        });
     }
 };
