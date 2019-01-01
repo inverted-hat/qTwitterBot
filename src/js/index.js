@@ -1,7 +1,7 @@
 const fileUtils = require('./fileUtils.js');
 const episodesUtils = require('./episodesUtils.js');
 const twitterUtils = require('./twitterUtils.js');
-const episodesFilePath = './src/data/episodes.json';
+const episodesFilePath = `${__dirname}/../data/episodes.json`;
 
 fileUtils.readFile(episodesFilePath).then(content => {
     const episodes = episodesUtils.resetEpisodesWhenAllHaveBeenPosted(JSON.parse(content).episodes);
