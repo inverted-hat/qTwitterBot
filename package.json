@@ -1,6 +1,6 @@
 {
   "name": "qTwitterBot",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A twitter bot posting a random (German) Three Investigators episode each day.",
   "main": "src/js/index.js",
   "scripts": {
