@@ -46,3 +46,11 @@ Run `npm install --production` to install the required dependencies.
 Run `npm start` to tweet a random episode.
 
 Configure a cron job or the like to tweet a random episode every day.
+
+## Running tests
+Run `npm install` to install the required dependencies.
+
+Run `npm test` to execute the [mocha](https://github.com/mochajs/mocha) tests.
+
+## License
+[MIT](https://github.com/inverted-hat/qTwitterBot/blob/master/LICENSE)
