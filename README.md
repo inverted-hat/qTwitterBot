@@ -3,15 +3,23 @@
 </p>
 
 <p align="center">
-    A twitter bot posting a random [Three Investigators](https://en.wikipedia.org/wiki/Three_Investigators#Germany) audio drama each day.
+    A twitter bot posting a random <a href="https://en.wikipedia.org/wiki/Three_Investigators#Germany" target="_blank">Three Investigators</a> audio drama each day.
 </p>
 
 <p align="center">
-    [![Build Status](https://travis-ci.org/inverted-hat/qTwitterBot.svg?branch=master)](https://travis-ci.org/inverted-hat/qTwitterBot)
-    [![Coverage Status](https://coveralls.io/repos/github/inverted-hat/qTwitterBot/badge.svg?branch=master)](https://coveralls.io/github/inverted-hat/qTwitterBot?branch=master)
-    [![GitHub license](https://img.shields.io/github/license/inverted-hat/qTwitterBot.svg)](https://github.com/inverted-hat/qTwitterBot/blob/master/LICENSE)
-    [![Dependency Status](https://david-dm.org/inverted-hat/qTwitterBot.svg)](https://david-dm.org/inverted-hat/qTwitterBot)
-<p align="center">
+    <a href="https://travis-ci.org/inverted-hat/qTwitterBot" target="_blank">
+        <img alt="Build Status" src="https://travis-ci.org/inverted-hat/qTwitterBot.svg?branch=master">
+    </a>
+    <a href="https://coveralls.io/github/inverted-hat/qTwitterBot?branch=master" target="_blank">
+        <img alt="Coverage Status" src="https://coveralls.io/repos/github/inverted-hat/qTwitterBot/badge.svg?branch=master">
+    </a>
+    <a href="https://github.com/inverted-hat/qTwitterBot/blob/master/LICENSE">
+        <img alt="GitHub license" src="https://img.shields.io/github/license/inverted-hat/qTwitterBot.svg">
+    </a>
+    <a href="https://david-dm.org/inverted-hat/qTwitterBot" target="_blank">
+        <img alt="Dependency Status" src="https://david-dm.org/inverted-hat/qTwitterBot.svg">
+    </a>
+</p>
 
 
 ## What is qTwitterBot?
