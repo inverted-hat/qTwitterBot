@@ -19,6 +19,9 @@
     <a href="https://david-dm.org/inverted-hat/qTwitterBot" target="_blank">
         <img alt="Dependency Status" src="https://david-dm.org/inverted-hat/qTwitterBot.svg">
     </a>
+    <a href="https://github.com/inverted-hat/qTwitterBot/releases" >
+        <img alt="Github Release" src="https://img.shields.io/github/release/inverted-hat/qTwitterBot.svg">
+    </a>
 </p>
 
 
