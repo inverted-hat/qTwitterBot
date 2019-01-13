@@ -9,7 +9,7 @@ fileUtils.readFile(episodesFilePath).then(content => {
     const randomEpisode = episodesUtils.getRandomUnPostedEpisode(episodes);
 
     twitterUtils.init(twitterConfig);
-    twitterUtils.postStatus({ status: `Folge ${randomEpisode.number} ${randomEpisode.title}` })
+    twitterUtils.postStatus({ status: `Folge ${randomEpisode.number} ${randomEpisode.title} #DreiFragezeichen` })
         .then(data => {
             console.log(data);
 
